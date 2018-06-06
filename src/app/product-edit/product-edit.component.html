@@ -1,0 +1,50 @@
+<div class="button-row">
+  <a mat-raised-button color="primary" (click)="productDetails()"><mat-icon>show</mat-icon></a>
+</div>
+<form [formGroup]="productForm" (ngSubmit)="onFormSubmit(productForm.value)">
+  <mat-form-field class="example-full-width">
+    <input matInput placeholder="ISBN" formControlName="isbn"
+           [errorStateMatcher]="matcher">
+    <mat-error>
+      <span *ngIf="!productForm.get('isbn').valid && productForm.get('isbn').touched">Please enter ISBN</span>
+    </mat-error>
+  </mat-form-field>
+  <mat-form-field class="example-full-width">
+    <input matInput placeholder="Title" formControlName="title"
+           [errorStateMatcher]="matcher">
+    <mat-error>
+      <span *ngIf="!productForm.get('title').valid && productForm.get('title').touched">Please enter Product Title</span>
+    </mat-error>
+  </mat-form-field>
+  <mat-form-field class="example-full-width">
+    <input matInput placeholder="Author" formControlName="author"
+           [errorStateMatcher]="matcher">
+    <mat-error>
+      <span *ngIf="!productForm.get('author').valid && productForm.get('author').touched">Please enter Product Author</span>
+    </mat-error>
+  </mat-form-field>
+  <mat-form-field class="example-full-width">
+    <textarea matInput placeholder="Description" formControlName="description"
+           [errorStateMatcher]="matcher"></textarea>
+    <mat-error>
+      <span *ngIf="!productForm.get('description').valid && productForm.get('description').touched">Please enter Product Description</span>
+    </mat-error>
+  </mat-form-field>
+  <mat-form-field class="example-full-width">
+    <input matInput placeholder="Publisher" formControlName="publisher"
+           [errorStateMatcher]="matcher">
+    <mat-error>
+      <span *ngIf="!productForm.get('publisher').valid && productForm.get('publisher').touched">Please enter Publisher</span>
+    </mat-error>
+  </mat-form-field>
+  <mat-form-field class="example-full-width">
+    <input matInput placeholder="Published Year" formControlName="published_year"
+           [errorStateMatcher]="matcher">
+    <mat-error>
+      <span *ngIf="!productForm.get('published_year').valid && productForm.get('published_year').touched">Please enter Published Year</span>
+    </mat-error>
+  </mat-form-field>
+  <div class="button-row">
+    <button type="submit" [disabled]="!productForm.valid" mat-raised-button color="primary"><mat-icon>save</mat-icon></button>
+  </div>
+</form>
