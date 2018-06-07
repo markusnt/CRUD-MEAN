@@ -11,25 +11,27 @@ import { FormControl, FormGroupDirective, FormBuilder, FormGroup, NgForm, Valida
 export class ProductEditComponent implements OnInit {
 
   productForm: FormGroup;
-  id:string = '';
-  isbn:string = '';
-  title:string = '';
-  description:string = '';
-  author:string = '';
-  publisher:string = '';
-  published_year:string = '';
+  id:string='';
+  produto_id:string= '';
+  nro_serie:string= '';
+  nro_contrato:string= '';
+  termino_vigencia:string= '';
+  suporte:string= '';
+  suporte_fornecedor:string= '';
+  versao_software:string= '';
 
   constructor(private router: Router, private route: ActivatedRoute, private api: ApiService, private formBuilder: FormBuilder) { }
 
   ngOnInit() {
     this.getProduct(this.route.snapshot.params['id']);
     this.productForm = this.formBuilder.group({
-      'isbn' : [null, Validators.required],
-      'title' : [null, Validators.required],
-      'description' : [null, Validators.required],
-      'author' : [null, Validators.required],
-      'publisher' : [null, Validators.required],
-      'published_year' : [null, Validators.required]
+      'produto_id' : [null, Validators.required],
+      'nro_serie' : [null, Validators.required],
+      'nro_contrato' : [null, Validators.required],
+      'termino_vigencia' : [null, Validators.required],
+      'suporte' : [null, Validators.required],
+      'suporte_fornecedor' : [null, Validators.required],
+      'versao_software' : [null, Validators.required]
     });
   }
 
@@ -37,12 +39,13 @@ export class ProductEditComponent implements OnInit {
     this.api.getProduct(id).subscribe(data => {
       this.id = data._id;
       this.productForm.setValue({
-        isbn: data.isbn,
-        title: data.title,
-        description: data.description,
-        author: data.author,
-        publisher: data.publisher,
-        published_year: data.published_year
+        produto_id: data.produto_id,
+        nro_serie: data.nro_serie,
+        nro_contrato: data.nro_contrato,
+        termino_vigencia: data.termino_vigencia,
+        suporte: data.suporte,
+        suporte_fornecedor: data.suporte_fornecedor,
+        versao_software: data.versao_software
       });
     });
   }

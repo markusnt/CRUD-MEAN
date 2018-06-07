@@ -3,21 +3,21 @@
 </div>
 <mat-card class="example-card">
   <mat-card-header>
-    <mat-card-title><h2>{{product.title}}</h2></mat-card-title>
-    <mat-card-subtitle>{{product.description}}</mat-card-subtitle>
+    <mat-card-title><h2>{{product.produto_id}}</h2></mat-card-title>
+    <mat-card-subtitle>{{product.nro_serie}}</mat-card-subtitle>
   </mat-card-header>
   <mat-card-content>
     <dl>
-      <dt>ISBN:</dt>
-      <dd>{{product.isbn}}</dd>
-      <dt>Author:</dt>
-      <dd>{{product.author}}</dd>
-      <dt>Publisher:</dt>
-      <dd>{{product.publisher}}</dd>
-      <dt>Publish Year:</dt>
-      <dd>{{product.published_year}}</dd>
-      <dt>Update Date:</dt>
-      <dd>{{product.updated_date | date}}</dd>
+      <dt>Numero de Contrato:</dt>
+      <dd>{{product.nro_contrato}}</dd>
+      <dt>Termino de Vigencia:</dt>
+      <dd>{{product.termino_vigencia | date}}</dd>
+      <dt>Suporte:</dt>
+      <dd>{{product.suporte}}</dd>
+      <dt>Suporte Fornecedor:</dt>
+      <dd>{{product.suporte_fornecedor}}</dd>
+      <dt>Versao de Software:</dt>
+      <dd>{{product.versao_software}}</dd>
     </dl>
   </mat-card-content>
   <mat-card-actions>

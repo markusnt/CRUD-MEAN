@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "mean-angular6": {
+    "CorControl": {
       "root": "",
       "sourceRoot": "src",
       "projectType": "application",
@@ -13,7 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/mean-angular6",
+            "outputPath": "dist/CorControl",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -53,18 +53,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "mean-angular6:build"
+            "browserTarget": "CorControl:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "mean-angular6:build:production"
+              "browserTarget": "CorControl:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "mean-angular6:build"
+            "browserTarget": "CorControl:build"
           }
         },
         "test": {
@@ -101,7 +101,7 @@
         }
       }
     },
-    "mean-angular6-e2e": {
+    "CorControl-e2e": {
       "root": "e2e/",
       "projectType": "application",
       "architect": {
@@ -109,7 +109,7 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "mean-angular6:serve"
+            "devServerTarget": "CorControl:serve"
           }
         },
         "lint": {
@@ -124,5 +124,5 @@
       }
     }
   },
-  "defaultProject": "mean-angular6"
+  "defaultProject": "CorControl"
 }

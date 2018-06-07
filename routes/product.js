@@ -3,7 +3,7 @@ var router = express.Router();
 var mongoose = require('mongoose');
 var Product = require('../models/Product.js');
 
-/* GET ALL BOOKS */
+/* GET ALL PRODUCTS */
 router.get('/', function(req, res, next) {
   Product.find(function (err, products) {
     if (err) return next(err);
@@ -11,7 +11,7 @@ router.get('/', function(req, res, next) {
   });
 });
 
-/* GET SINGLE BOOK BY ID */
+/* GET SINGLE PRODUCT BY ID */
 router.get('/:id', function(req, res, next) {
   Product.findById(req.params.id, function (err, post) {
     if (err) return next(err);
@@ -19,7 +19,7 @@ router.get('/:id', function(req, res, next) {
   });
 });
 
-/* SAVE BOOK */
+/* SAVE PRODUCT */
 router.post('/', function(req, res, next) {
   Product.create(req.body, function (err, post) {
     if (err) return next(err);
@@ -27,7 +27,7 @@ router.post('/', function(req, res, next) {
   });
 });
 
-/* UPDATE BOOK */
+/* UPDATE PRODUCT */
 router.put('/:id', function(req, res, next) {
   Product.findByIdAndUpdate(req.params.id, req.body, function (err, post) {
     if (err) return next(err);
@@ -35,7 +35,7 @@ router.put('/:id', function(req, res, next) {
   });
 });
 
-/* DELETE BOOK */
+/* DELETE PRODUCT */
 router.delete('/:id', function(req, res, next) {
   Product.findByIdAndRemove(req.params.id, req.body, function (err, post) {
     if (err) return next(err);

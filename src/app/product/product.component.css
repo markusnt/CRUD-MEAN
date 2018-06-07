@@ -6,11 +6,20 @@
   overflow: auto;
 }
 
-.isbn-col {
+.produto_id-col {
   flex: 0 0 100px !important;
   white-space: unset !important;
 }
 
 .button-row {
   margin: 10px 0;
+}
+
+table {
+  width: 100%;
+}
+
+.mat-form-field {
+  font-size: 14px;
+  width: 100%;
 }

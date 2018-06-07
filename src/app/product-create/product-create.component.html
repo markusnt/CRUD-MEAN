@@ -3,45 +3,52 @@
 </div>
 <form [formGroup]="productForm" (ngSubmit)="onFormSubmit(productForm.value)">
   <mat-form-field class="example-full-width">
-    <input matInput placeholder="ISBN" formControlName="isbn"
+    <input matInput placeholder="IDProduto" formControlName="produto_id"
            [errorStateMatcher]="matcher">
     <mat-error>
-      <span *ngIf="!productForm.get('isbn').valid && productForm.get('isbn').touched">Please enter ISBN</span>
+      <span *ngIf="!productForm.get('produto_id').valid && productForm.get('produto_id').touched">Please enter IDProduto</span>
     </mat-error>
   </mat-form-field>
   <mat-form-field class="example-full-width">
-    <input matInput placeholder="Title" formControlName="title"
+    <input matInput placeholder="NroSerie" formControlName="nro_serie"
            [errorStateMatcher]="matcher">
     <mat-error>
-      <span *ngIf="!productForm.get('title').valid && productForm.get('title').touched">Please enter Product Title</span>
+      <span *ngIf="!productForm.get('nro_serie').valid && productForm.get('nro_serie').touched">Please enter Product NroSerie</span>
     </mat-error>
   </mat-form-field>
   <mat-form-field class="example-full-width">
-    <input matInput placeholder="Author" formControlName="author"
+    <input matInput placeholder="NroContrato" formControlName="nro_contrato"
            [errorStateMatcher]="matcher">
     <mat-error>
-      <span *ngIf="!productForm.get('author').valid && productForm.get('author').touched">Please enter Product Author</span>
+      <span *ngIf="!productForm.get('nro_contrato').valid && productForm.get('nro_contrato').touched">Please enter Product NroContrato</span>
     </mat-error>
   </mat-form-field>
   <mat-form-field class="example-full-width">
-    <textarea matInput placeholder="Description" formControlName="description"
-           [errorStateMatcher]="matcher"></textarea>
+    <input type="date" matInput placeholder="TerminoVigencia" formControlName="termino_vigencia"
+           [errorStateMatcher]="matcher">
     <mat-error>
-      <span *ngIf="!productForm.get('description').valid && productForm.get('description').touched">Please enter Product Description</span>
+      <span *ngIf="!productForm.get('termino_vigencia').valid && productForm.get('termino_vigencia').touched">Please enter Product TerminoVigencia</span>
     </mat-error>
   </mat-form-field>
   <mat-form-field class="example-full-width">
-    <input matInput placeholder="Publisher" formControlName="publisher"
+    <input matInput placeholder="Suporte" formControlName="suporte"
            [errorStateMatcher]="matcher">
     <mat-error>
-      <span *ngIf="!productForm.get('publisher').valid && productForm.get('publisher').touched">Please enter Publisher</span>
+      <span *ngIf="!productForm.get('suporte').valid && productForm.get('suporte').touched">Please enter Suporte</span>
     </mat-error>
   </mat-form-field>
   <mat-form-field class="example-full-width">
-    <input matInput placeholder="Published Year" formControlName="published_year"
+    <input matInput placeholder="SuporteFornecedor" formControlName="suporte_fornecedor"
            [errorStateMatcher]="matcher">
     <mat-error>
-      <span *ngIf="!productForm.get('published_year').valid && productForm.get('published_year').touched">Please enter Published Year</span>
+      <span *ngIf="!productForm.get('suporte_fornecedor').valid && productForm.get('suporte_fornecedor').touched">Please enter SuporteFornecedor</span>
+    </mat-error>
+  </mat-form-field>
+  <mat-form-field class="example-full-width">
+    <input matInput placeholder="VersaoSoftware" formControlName="versao_software"
+           [errorStateMatcher]="matcher">
+    <mat-error>
+      <span *ngIf="!productForm.get('versao_software').valid && productForm.get('versao_software').touched">Please enter VersaoSoftware</span>
     </mat-error>
   </mat-form-field>
   <div class="button-row">

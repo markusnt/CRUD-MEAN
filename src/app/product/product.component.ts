@@ -11,7 +11,7 @@ import { Observable } from 'rxjs';
 export class ProductComponent implements OnInit {
 
   products: any;
-  displayedColumns = ['isbn', 'title', 'author'];
+  displayedColumns = ['produto_id', 'nro_serie', 'termino_vigencia'];
   dataSource = new ProductDataSource(this.api);
 
   constructor(private api: ApiService) { }
