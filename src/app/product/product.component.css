@@ -1,4 +1,4 @@
-.example-container {
+.example-container, p-table {
   display: flex;
   flex-direction: column;
   max-height: 500px;
@@ -15,7 +15,7 @@
   margin: 10px 0;
 }
 
-table {
+table, p-table {
   width: 100%;
 }
 

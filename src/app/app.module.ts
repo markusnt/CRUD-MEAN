@@ -2,15 +2,22 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { RouterModule, Routes } from '@angular/router';
+
+// Imports do PrimeNG
+import { AccordionModule } from 'primeng/accordion';     // accordion and accordion tab
+import { MenuItem } from 'primeng/api';                 // api
+import {TableModule} from 'primeng/table';
+import {ChartModule} from 'primeng/chart';
 
 import { AppComponent } from './app.component';
-import { RouterModule, Routes } from '@angular/router';
 import { ProductComponent } from './product/product.component';
 import { ProductDetailComponent } from './product-detail/product-detail.component';
 import { ProductCreateComponent } from './product-create/product-create.component';
 import { ProductEditComponent } from './product-edit/product-edit.component';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
+// Imports do MaterialAngular
 import {
   MatInputModule,
   MatPaginatorModule,
@@ -20,7 +27,7 @@ import {
   MatIconModule,
   MatButtonModule,
   MatCardModule,
-  MatFormFieldModule } from "@angular/material";
+  MatFormFieldModule } from '@angular/material';
 
 const appRoutes: Routes = [
   {
@@ -72,7 +79,9 @@ const appRoutes: Routes = [
     MatIconModule,
     MatButtonModule,
     MatCardModule,
-    MatFormFieldModule
+    MatFormFieldModule,
+    TableModule,
+    ChartModule
   ],
   providers: [],
   bootstrap: [AppComponent]
