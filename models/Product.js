@@ -8,7 +8,7 @@ var ProductSchema = new mongoose.Schema({
   suporte: String,
   suporte_fornecedor: String,
   versao_software: String,
-  
+  fabricante: String
   //updated_date: { type: Date, default: Date.now },
 });
 

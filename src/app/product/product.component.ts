@@ -4,11 +4,8 @@ import {MatTableDataSource, MatPaginator} from '@angular/material';
 import { ApiService } from '../api.service';
 import { DataSource } from '@angular/cdk/collections';
 import { Observable } from 'rxjs';
-
-import { AccordionModule } from 'primeng/accordion';     // accordion and accordion tab
-import { MenuItem } from 'primeng/api';                 // api
-import {TableModule} from 'primeng/table';
-
+import { Product } from '../../../models/Product';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-product',
@@ -17,35 +14,19 @@ import {TableModule} from 'primeng/table';
 })
 export class ProductComponent implements OnInit {
 
-  products: any[];
+  displayDialog: boolean;
   cols: any[];
-  data: any;
-  displayedColumns = ['produto_id', 'nro_serie', 'termino_vigencia'];
+  products: any[];
+  selectedProduct: Product;
+
   dataSource = new ProductDataSource(this.api);
 
-  constructor(private api: ApiService) {
-
-    this.data = {
-      labels: ['produto_id', 'nro_serie', 'termino_vigencia'],
-      datasets: [
-          {
-              data: [300, 50, 100],
-              backgroundColor: [
-                  '#FF6384',
-                  '#36A2EB',
-                  '#FFCE56'
-              ],
-              hoverBackgroundColor: [
-                  '#FF6384',
-                  '#36A2EB',
-                  '#FFCE56'
-              ]
-          }]
-      };
+  constructor(private router: Router, private api: ApiService) {
 
    }
 
   ngOnInit() {
+
     this.api.getProducts()
       .subscribe(res => {
         console.log(res);
@@ -56,10 +37,24 @@ export class ProductComponent implements OnInit {
 
     this.cols = [
       { field: 'produto_id', header: 'ID Produto' },
-      {field: 'nro_serie', header: 'Nro de Serie' },
+      { field: 'fabricante', header: 'Fabricante' },
+      { field: 'nro_serie', header: 'Nro de Serie' },
+     // { field: 'nro_contrato', header: 'Nro do Contrato' },
+     // { field: 'suporte', header: 'Suporte' },
+     // { field: 'suporte_fornecedor', header: 'Suporte Fornecedor' },
+     // { field: 'versao_software', header: 'Versao de Software' },
       { field: 'termino_vigencia', header: 'Termino de Vigencia' }
     ];
   }
+
+  showDialogToAdd() {
+    this.displayDialog = true;
+  }
+
+  onRowSelect(event) {
+    this.router.navigate(['/product-details/' + event.data._id]);
+  }
+
 }
 
 export class ProductDataSource extends DataSource<any> {

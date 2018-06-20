@@ -2,10 +2,10 @@
   <a mat-raised-button color="primary" [routerLink]="['/product-create']"><mat-icon>add</mat-icon></a>
 </div>
 
-<p-table #dt [columns]="cols" [value]="products" [paginator]="true" [rows]="15">
+<p-table #dt [columns]="cols" [value]="products" [paginator]="true" [rows]="15" selectionMode="single" [responsive]="true" (onRowSelect)="onRowSelect($event)">
     <ng-template pTemplate="caption">
       <div style="text-align: right">        
-          <i class="fa fa-search" style="margin:4px 4px 0 0"></i>
+          <i class="material-icons" style="margin:4px 4px 0 0"></i>
           <input type="text" pInputText size="50" placeholder="Filter" (input)="dt.filterGlobal($event.target.value, 'contains')" style="width:auto">
       </div>
     </ng-template>
@@ -25,4 +25,18 @@
     </ng-template>
 </p-table>
 
-<p-chart type="pie" [data]="data"></p-chart>
+
+<!--<p-chart type="pie" [data]="data"></p-chart>
+
+<p-dialog header="Detalhes" [(visible)]="display">
+<p-table>
+    <ng-template pTemplate="summary">
+        <ul>
+            <li *ngFor="let product of selectedProducts1" style="text-align: left">
+                {{product.vin + ' - ' + product.brand + ' - ' + product.year + ' - ' + product.color}}
+            </li>
+        </ul>
+    </ng-template>
+</p-table>
+</p-dialog>
+-->

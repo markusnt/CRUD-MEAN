@@ -3,12 +3,13 @@
 </div>
 <mat-card class="example-card">
   <mat-card-header>
-    <mat-card-title><h2>{{product.produto_id}}</h2></mat-card-title>
-    <mat-card-subtitle>{{product.nro_serie}}</mat-card-subtitle>
+    <mat-card-title><h2>ID: {{ product.produto_id }}</h2></mat-card-title>
+    <mat-card-subtitle>Nro de Serie: {{ product.nro_serie }}</mat-card-subtitle>
+    <mat-card-subtitle>Fabricante: {{ product.fabricante }}</mat-card-subtitle>
   </mat-card-header>
   <mat-card-content>
     <dl>
-      <dt>Numero de Contrato:</dt>
+      <dt >Numero de Contrato:</dt>
       <dd>{{product.nro_contrato}}</dd>
       <dt>Termino de Vigencia:</dt>
       <dd>{{product.termino_vigencia | date}}</dd>

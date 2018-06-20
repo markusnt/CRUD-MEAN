@@ -4,7 +4,7 @@
   "scripts": {
     "ng": "ng",
     "start": "ng build && node ./bin/www",
-    "build": "ng build",
+    "build": "ng build --watch",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e"
@@ -30,7 +30,7 @@
     "http-errors": "^1.6.3",
     "mongoose": "^5.1.1",
     "morgan": "^1.9.0",
-    "primeicons": "^1.0.0-beta.7",
+    "primeicons": "^1.0.0-beta.8",
     "primeng": "^6.0.0-rc.1",
     "rxjs": "^6.0.0",
     "serve-favicon": "^2.5.0",

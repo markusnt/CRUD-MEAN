@@ -8,8 +8,10 @@ import { RouterModule, Routes } from '@angular/router';
 // Imports do PrimeNG
 import { AccordionModule } from 'primeng/accordion';     // accordion and accordion tab
 import { MenuItem } from 'primeng/api';                 // api
-import {TableModule} from 'primeng/table';
-import {ChartModule} from 'primeng/chart';
+import { TableModule } from 'primeng/table';
+import { DialogModule } from 'primeng/dialog';
+import { ButtonModule } from 'primeng/button';
+
 
 import { AppComponent } from './app.component';
 import { ProductComponent } from './product/product.component';
@@ -19,15 +21,10 @@ import { ProductEditComponent } from './product-edit/product-edit.component';
 
 // Imports do MaterialAngular
 import {
-  MatInputModule,
-  MatPaginatorModule,
-  MatProgressSpinnerModule,
-  MatSortModule,
-  MatTableModule,
-  MatIconModule,
-  MatButtonModule,
-  MatCardModule,
-  MatFormFieldModule } from '@angular/material';
+  MatInputModule, MatPaginatorModule, MatProgressSpinnerModule,
+  MatSortModule, MatTableModule, MatIconModule,
+  MatButtonModule, MatCardModule, MatFormFieldModule,
+  MatSelectModule, MatDatepickerModule } from '@angular/material';
 
 const appRoutes: Routes = [
   {
@@ -71,17 +68,11 @@ const appRoutes: Routes = [
     ReactiveFormsModule,
     HttpClientModule,
     BrowserAnimationsModule,
-    MatInputModule,
-    MatTableModule,
-    MatPaginatorModule,
-    MatSortModule,
-    MatProgressSpinnerModule,
-    MatIconModule,
-    MatButtonModule,
-    MatCardModule,
-    MatFormFieldModule,
-    TableModule,
-    ChartModule
+    MatInputModule, MatTableModule, MatPaginatorModule,
+    MatSortModule, MatProgressSpinnerModule, MatIconModule,
+    MatButtonModule, MatCardModule, MatFormFieldModule,
+    MatSelectModule, MatDatepickerModule,
+    TableModule, DialogModule, ButtonModule
   ],
   providers: [],
   bootstrap: [AppComponent]
