@@ -13,10 +13,10 @@ export class ProductCreateComponent implements OnInit {
   productForm: FormGroup;
   produto_id = '';
   nro_serie = '';
-  nro_contrato = '';
-  termino_vigencia = '';
-  suporte = '';
+  vigencia = '';
+  suporte_modalidade = '';
   suporte_fornecedor = '';
+  data_end_suport = '';
   versao_software = '';
   fabricante = '';
 
@@ -26,10 +26,10 @@ export class ProductCreateComponent implements OnInit {
     this.productForm = this.formBuilder.group({
       'produto_id' : [null, Validators.required],
       'nro_serie' : [null, Validators.required],
-      'nro_contrato' : [null, Validators.required],
-      'termino_vigencia' : [null, Validators.required],
-      'suporte' : [null, Validators.required],
+      'vigencia' : [null, Validators.required],
+      'suporte_modalidade' : [null, Validators.required],
       'suporte_fornecedor' : [null, Validators.required],
+      'data_end_suport' : [null, Validators.required],
       'versao_software' : [null, Validators.required],
       'fabricante' : [null, Validators.required]
   });

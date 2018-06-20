@@ -9,16 +9,16 @@
   </mat-card-header>
   <mat-card-content>
     <dl>
-      <dt >Numero de Contrato:</dt>
-      <dd>{{product.nro_contrato}}</dd>
-      <dt>Termino de Vigencia:</dt>
-      <dd>{{product.termino_vigencia | date}}</dd>
-      <dt>Suporte:</dt>
-      <dd>{{product.suporte}}</dd>
-      <dt>Suporte Fornecedor:</dt>
+      <dt >Modalidade de Suporte:</dt>
+      <dd>{{product.suporte_modalidade}}</dd>
+      <dt>Fornecedor Suporte:</dt>
       <dd>{{product.suporte_fornecedor}}</dd>
+      <dt>Data end Suport:</dt>
+      <dd>{{product.data_end_suport}}</dd>
       <dt>Versao de Software:</dt>
       <dd>{{product.versao_software}}</dd>
+      <dt>Descrição Vigencia:</dt>
+      <dd>{{product.vigencia}}</dd>
     </dl>
   </mat-card-content>
   <mat-card-actions>
@@ -26,3 +26,4 @@
     <a mat-raised-button color="warn" (click)="deleteProduct(product._id)"><mat-icon>delete</mat-icon></a>
   </mat-card-actions>
 </mat-card>
+

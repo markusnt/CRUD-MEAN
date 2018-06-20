@@ -37,14 +37,15 @@ export class ProductComponent implements OnInit {
 
     this.cols = [
       { field: 'produto_id', header: 'ID Produto' },
-      { field: 'fabricante', header: 'Fabricante' },
       { field: 'nro_serie', header: 'Nro de Serie' },
-     // { field: 'nro_contrato', header: 'Nro do Contrato' },
-     // { field: 'suporte', header: 'Suporte' },
-     // { field: 'suporte_fornecedor', header: 'Suporte Fornecedor' },
-     // { field: 'versao_software', header: 'Versao de Software' },
-      { field: 'termino_vigencia', header: 'Termino de Vigencia' }
+      // { field: 'vigencia', header: 'Vigencia' },
+      // { field: 'suporte_modalidade', header: 'Suporte Modalidade' },
+      // { field: 'suporte_fornecedor', header: 'Suporte Fornecedor' },
+      // { field: 'versao_software', header: 'Versao de Software' },
+      { field: 'fabricante', header: 'Fabricante' },
+      { field: 'data_end_suport', header: 'Data End Suport' }
     ];
+
   }
 
   showDialogToAdd() {

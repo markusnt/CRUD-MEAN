@@ -19,21 +19,13 @@
     </mat-error>
   </mat-form-field>
 
-  <!--<mat-form-field class="example-full-width">
-      <input matInput placeholder="Fabricante" formControlName="fabricante"
-             [errorStateMatcher]="matcher">
-      <mat-error>
-        <span *ngIf="!productForm.get('fabricante').valid && productForm.get('fabricante').touched">Informe o Fabricante</span>
-      </mat-error>
-    </mat-form-field>-->
-
   <mat-form-field class="example-full-width"> 
     <mat-select placeholder="Fabricante" formControlName="fabricante"
-    [errorStateMatcher]="matcher">
+                [errorStateMatcher]="matcher">
       <mat-option>--</mat-option>
-      <mat-option>Cisco</mat-option>
-      <mat-option>Huawei</mat-option>
-      <mat-option>Juniper</mat-option>
+      <mat-option value='Cisco'>Cisco</mat-option>
+      <mat-option value='Huawei'>Huawei</mat-option>
+      <mat-option value='Juniper'>Juniper</mat-option>
     </mat-select>
     <mat-error>
         <span *ngIf="!productForm.get('fabricante').valid && productForm.get('fabricante').touched">Informe o Fabricante</span>
@@ -41,34 +33,38 @@
   </mat-form-field>
 
   <mat-form-field class="example-full-width">
-    <input matInput placeholder="Numero do Contrato" formControlName="nro_contrato"
+    <input matInput placeholder="Descrição de Vigencia" formControlName="vigencia"
            [errorStateMatcher]="matcher">
     <mat-error>
-      <span *ngIf="!productForm.get('nro_contrato').valid && productForm.get('nro_contrato').touched">Informe o Numero do Contrato</span>
+      <span *ngIf="!productForm.get('vigencia').valid && productForm.get('vigencia').touched">Descreva as datas e suportes vigentes</span>
     </mat-error>
   </mat-form-field>
   
-  <mat-form-field class="example-full-width">
-      <input type=date matInput placeholder="Data do Termino de Vigencia" formControlName="termino_vigencia"
-             [errorStateMatcher]="matcher">
+  <mat-form-field class="example-full-width"> 
+      <mat-select placeholder="Fabricante" formControlName="suporte_modalidade"
+                  [errorStateMatcher]="matcher">
+        <mat-option>--</mat-option>
+        <mat-option value='PRTNR SS 8X5XNBD'>PRTNR SS 8X5XNBD</mat-option>
+        <mat-option value='SNTC 8X5XNBD'>SNTC 8X5XNBD</mat-option>
+      </mat-select>
       <mat-error>
-        <span *ngIf="!productForm.get('termino_vigencia').valid && productForm.get('termino_vigencia').touched">Informe a Data de Vigencia do Contrato</span>
-      </mat-error>
+          <span *ngIf="!productForm.get('suporte_modalidade').valid && productForm.get('suporte_modalidade').touched">Informe a Modalidade</span>
+        </mat-error>
     </mat-form-field>
 
   <mat-form-field class="example-full-width">
-    <input matInput placeholder="Suporte" formControlName="suporte"
+    <input matInput placeholder="Suporte Fornecedor" formControlName="suporte_fornecedor"
            [errorStateMatcher]="matcher">
     <mat-error>
-      <span *ngIf="!productForm.get('suporte').valid && productForm.get('suporte').touched">Informe o Suporte</span>
+      <span *ngIf="!productForm.get('suporte_fornecedor').valid && productForm.get('suporte_fornecedor').touched">Informe o Suporte</span>
     </mat-error>
   </mat-form-field>
 
   <mat-form-field class="example-full-width">
-    <input matInput placeholder="SuporteFornecedor" formControlName="suporte_fornecedor"
+    <input matInput placeholder="Data end Suport" formControlName="data_end_suport"
            [errorStateMatcher]="matcher">
     <mat-error>
-      <span *ngIf="!productForm.get('suporte_fornecedor').valid && productForm.get('suporte_fornecedor').touched">Informe o Suporte do Fornecedor</span>
+      <span *ngIf="!productForm.get('data_end_suport').valid && productForm.get('data_end_suport').touched">Informe a Data Fim ou [Não informado pelo fabricante] </span>
     </mat-error>
   </mat-form-field>
 

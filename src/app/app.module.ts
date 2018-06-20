@@ -24,7 +24,7 @@ import {
   MatInputModule, MatPaginatorModule, MatProgressSpinnerModule,
   MatSortModule, MatTableModule, MatIconModule,
   MatButtonModule, MatCardModule, MatFormFieldModule,
-  MatSelectModule, MatDatepickerModule } from '@angular/material';
+  MatSelectModule, MatDatepickerModule, MatGridListModule } from '@angular/material';
 
 const appRoutes: Routes = [
   {
@@ -71,7 +71,7 @@ const appRoutes: Routes = [
     MatInputModule, MatTableModule, MatPaginatorModule,
     MatSortModule, MatProgressSpinnerModule, MatIconModule,
     MatButtonModule, MatCardModule, MatFormFieldModule,
-    MatSelectModule, MatDatepickerModule,
+    MatSelectModule, MatDatepickerModule, MatGridListModule,
     TableModule, DialogModule, ButtonModule
   ],
   providers: [],
